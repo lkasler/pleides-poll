@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" xs="false" id="_14548369115171" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity xre="false" sm="false" abs="false" class="User" visibile="true" minimized="false" rootElement="_14548369115171" id="_1454836954724">
+        <jpa:attributes>
+            <basic attribute-type="String" visibile="true" name="name" id="_14548370259327">
+                <jpa:column unique="false" nullable="true" insertable="true" updatable="true" length="255"/>
+            </basic>
+            <basic attribute-type="int" visibile="true" name="age" id="_14548370670699">
+                <jpa:column unique="false" nullable="true" insertable="true" updatable="true" length="255"/>
+            </basic>
+            <basic attribute-type="char" visibile="true" name="gender" id="_145483708594910">
+                <jpa:column unique="false" nullable="true" insertable="true" updatable="true" length="255"/>
+            </basic>
+            <jpa:id attribute-type="Long" visibile="true" name="id" id="_14548369921735">
+                <jpa:column unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:generated-value/>
+            </jpa:id>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity xre="false" sm="false" abs="false" class="Questionnaire" visibile="true" minimized="false" rootElement="_14548369115171" id="_1454837487360">
+        <jpa:attributes>
+            <element-collection target-class="String" collection-type="java.util.List" visibile="true" name="questions" id="_145483758216413">
+                <jpa:collection-table/>
+            </element-collection>
+            <element-collection target-class="String" collection-type="java.util.List" visibile="true" name="answers" id="_145483761865214">
+                <jpa:collection-table/>
+            </element-collection>
+            <jpa:id attribute-type="Long" visibile="true" name="id" id="_145483750093212">
+                <jpa:column unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:generated-value/>
+            </jpa:id>
+            <jpa:id attribute-type="Long" visibile="true" name="userId" id="_145483802811220">
+                <jpa:column unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:generated-value/>
+            </jpa:id>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity xre="false" sm="false" abs="false" class="Question" visibile="true" minimized="false" rootElement="_14548369115171" id="_1454837786915">
+        <jpa:attributes>
+            <jpa:id attribute-type="Long" visibile="true" name="id" id="_145483779651217">
+                <jpa:column unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:generated-value/>
+            </jpa:id>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity xre="false" sm="false" abs="false" class="Answer" visibile="true" minimized="false" rootElement="_14548369115171" id="_1454837809486">
+        <jpa:attributes>
+            <jpa:id attribute-type="Long" visibile="true" name="id" id="_145483782260919">
+                <jpa:column unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:generated-value/>
+            </jpa:id>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:c>
+        <ct>java.util.List</ct>
+        <ct>java.util.Set</ct>
+        <ct>java.util.Collection</ct>
+    </jpa:c>
+    <jpa:diagram id="_14548369115172">
+        <plane elementRef="_14548369115171" id="_14548369115173_p">
+            <shape elementRef="_1454836954724" id="_1454836954724_gui">
+                <Bounds x="27.0" y="101.0" width="128.0" height="134.0"/>
+            </shape>
+            <shape elementRef="_1454837487360" id="_1454837487360_gui">
+                <Bounds x="251.0" y="101.0" width="176.0" height="134.0"/>
+            </shape>
+            <shape elementRef="_1454837786915" id="_1454837786915_gui">
+                <Bounds x="251.0" y="326.0" width="147.0" height="58.0"/>
+            </shape>
+            <shape elementRef="_1454837809486" id="_1454837809486_gui">
+                <Bounds x="27.0" y="326.0" width="140.0" height="58.0"/>
+            </shape>
+        </plane>
+    </jpa:diagram>
+</jpa:entity-mappings>
